@@ -24,6 +24,7 @@ module Full_adder_tb;
 reg a,b,cin;
 wire s,cout;
 Full_adder uut(.X(a), .Y(b), .C_in(cin), .S(s), .C_out(cout));
+    // or: Full_adder uut(a, b, cin, s, cout);
     initial begin
         a=0;
         b=0;
