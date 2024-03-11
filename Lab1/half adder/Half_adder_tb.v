@@ -24,7 +24,8 @@ module Half_adder_tb;
 reg A,B;
 wire c, s;
 Half_adder uut(.X(A), .Y(B), .C(c), .S(s));
-// or: Half_adder uut(A, B, c, s);
+// mapping by name
+// or: mapping by location Half_adder uut(A, B, c, s);
     initial begin
         A=0;
         B=0;
