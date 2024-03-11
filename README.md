@@ -2,4 +2,4 @@
 
 > Lab 1: Half / Full adder
 
-> Lab2: 4 bits adder, 4x4 multiplier
+> Lab 2: 4 bits adder, 4x4 multiplier
