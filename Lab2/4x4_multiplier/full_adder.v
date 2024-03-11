@@ -22,12 +22,12 @@
 
 module full_adder(X,Y,C_in,S,C_out);
     input X,Y,C_in;
-    wire S1,C1,C2,C3;
+    wire S1,C1,C2,C3; // temporary variables
     output S,C_out;
-    xor Gate1(S1,X,Y);
-    and Gate2(C1,X,Y);
-    and Gate3(C2,X,C_in);
-    and Gate4(C3,Y,C_in);
-    xor Gate5(S,S1,C_in);
-    or Gate6(C_out,C1,C2,C3);
+    xor Gate1(S1,X,Y); // XOR gate
+    and Gate2(C1,X,Y); // AND gate
+    and Gate3(C2,X,C_in); // Ibid.
+    and Gate4(C3,Y,C_in); // Ibid.
+    xor Gate5(S,S1,C_in); // cf. Gate1
+    or Gate6(C_out,C1,C2,C3); // OR gate
 endmodule
