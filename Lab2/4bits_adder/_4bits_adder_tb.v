@@ -1,45 +1,25 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/03/11 14:11:41
-// Design Name: 
-// Module Name: _4bits_adder_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module _4bits_adder_tb;
-reg [3:0]a;
-reg [3:0]b;
-reg cin;
-wire [3:0]s;
-//wire [3:0]c;
-integer i,j,k;
+reg [3:0]a; // inputs
+reg [3:0]b; // inputs
+reg cin; // input
+wire [3:0]s;// outputs
+wire c; // output
+integer i,j,k; // variables for 'for loop'
 
-_4bits_adder uut(a,b,cin,s,c);
+_4bits_adder uut(a,b,cin,s,c); // instantiate the Unit Under Testing (UUT)
 initial begin
     for(i=0;i<2;i=i+1)
     begin
-        cin = i;
+        cin = i; // assign cin from 0-1
         for(j=0;j<16;j=j+1)
         begin
-            a=j;
+            a=j; // assign a from 0000-1111
             for(k=0;k<16;k=k+1)
             begin
-                b=k;
-                #100;
+                b=k; // assign b from 0000-1111
+                #100; // wait 100ns
             end
         end
     end
