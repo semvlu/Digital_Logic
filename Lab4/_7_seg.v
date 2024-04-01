@@ -87,8 +87,8 @@ module _7_seg(
                 segL = 8'b11111110;
             end
             (4'b1001): begin
-                segR = 8'b11100110;
-                segL = 8'b11100110;
+                segR = 8'b11110110;
+                segL = 8'b11110110;
             end  
             (4'b1010): begin
                 segR = 8'b11101110;
@@ -102,7 +102,7 @@ module _7_seg(
                 segR = 8'b10011100;
                 segL = 8'b10011100;
             end
-                (4'b1101): begin
+            (4'b1101): begin
                 segR = 8'b01111010;
                 segL = 8'b01111010;
             end  
