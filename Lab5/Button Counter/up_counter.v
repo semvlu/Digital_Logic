@@ -22,21 +22,21 @@
 
 module up_counter(
     input D, CLK, reset,
-    output reg [3:0] bcd
+    output reg [3:0] bcd // BCD bits
     );
     wire btn_db;
-    debounce db(D,CLK,reset,btn_db);
+    debounce db(D,CLK,reset,btn_db); // connect output of debounce and input of up counter
     always @(posedge btn_db or posedge reset) begin
-        if(reset) bcd=4'b0000;
+        if(reset) bcd=4'b0000; // reset as 0
         
         else begin
             case(bcd)
                 (4'b0000):
-                    bcd=4'b0001; //1
+                    bcd=4'b0001; // 1
                 (4'b0001):
-                    bcd=4'b0010;
+                    bcd=4'b0010; // 2
                 (4'b0010):
-                    bcd=4'b0011;
+                    bcd=4'b0011; // 3, mutatis mutandis for the following
                 (4'b0011):
                     bcd=4'b0100;     
                 (4'b0100):
@@ -48,7 +48,7 @@ module up_counter(
                 (4'b0111):
                     bcd=4'b1000;    
                 (4'b1000):
-                    bcd=4'b1001; //9
+                    bcd=4'b1001; // 9
                 (4'b1001):
                     bcd=4'b0000; // return to 0                               
             endcase
