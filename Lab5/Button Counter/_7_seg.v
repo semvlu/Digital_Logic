@@ -28,7 +28,7 @@ module _7_seg(
     output reg [7:0] segL // ibid. except side=1 and the leftmost 4 displayers
     );   
     wire [3:0] n; // number from 0-15 (0-f)
-    up_counter cntr(D,CLK,reset,n);
+    up_counter cntr(D,CLK,reset,n); // connect up counter, output of up_counter as input of _7_seg
     always @(D or CLK or reset or pos) begin
         case (pos)// on/off for each displayer
             (3'b000):
