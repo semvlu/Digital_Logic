@@ -23,8 +23,8 @@
 module d_ff(D, CLK, reset,Q);
     input D, CLK, reset;
     output reg Q;
-    always @(posedge CLK or posedge reset) begin
-        if(reset) Q <= 1'b0;
-        else Q <= D;
+    always @(posedge CLK or posedge reset) begin // as CLK or reset have a pulse from 0 to 1, do the following
+        if(reset) Q <= 1'b0; // reset to 0
+        else Q <= D; // output Q as D
     end
 endmodule
