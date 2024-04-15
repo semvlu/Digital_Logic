@@ -8,6 +8,4 @@
 
 > Lab 4: 7 segment display
 
-> Lab 5: Button counter (0-9), Auto counter (00-99)
-
->> Auto counter WIP: 00-11-22-33...99
+> Lab 5: Button counter (0-9), Auto counter (00-99). Auto counter WIP: 00-11-22-33...99
