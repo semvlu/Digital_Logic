@@ -12,5 +12,6 @@
 
 > Lab 6: 24h clock. reset: 23:45:59. sw 0/1: 1Hz (normal) / 10 kHz
 
+> Lab 7: 24h clock. With time adjustment function
 
 [Reference](https://github.com/gerardofisch/Verilog-HDL/tree/main/Labs)
