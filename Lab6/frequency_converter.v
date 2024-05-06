@@ -2,12 +2,12 @@
 
 
 
-module frequency_converter(CLK, reset, divisor, out_clock);
-    input CLK, reset;
-    input [26:0] divisor;
-    output reg out_clock;
+module frequency_converter(
+    input CLK, reset,
+    input [26:0] divisor,
+    output reg out_clock
+    );
     reg [26:0] counter = 0;
-    
     initial out_clock = 0;    
     always @(posedge CLK or posedge reset) 
     begin
