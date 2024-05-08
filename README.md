@@ -8,7 +8,7 @@
 
 > Lab 4: 7 segment display
 
-> Lab 5: Button counter (0-9), Auto counter (00-99). Auto counter WIP: 00-11-22-33...99
+> Lab 5: Button counter (0-9)w/ debounce, Auto counter (00-99). Auto counter WIP: 00-11-22-33...99
 
 > Lab 6: 24h clock. reset: 23:45:59. sw 0/1: 1Hz (normal) / 10 kHz
 
