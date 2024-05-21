@@ -29,10 +29,17 @@ Add sources: Simulation
 reg as in; wire as out
 
 ```
-for(i=0,i<16,i=i+1) begin
- x = i
- #100
-end
+module _4x4_mult_tb;
+reg [3:0] x,y; // inputs
+wire [7:0] p; // outputs
+integer i, j; // variables used for 'for loop'
+_4x4_mult uut(x,y,p); // instantiate the Unit Under Testing (UUT)
+initial begin 
+ for(i=0,i<16,i=i+1) begin
+  x = i
+  #100
+ end
+endmodule
 ```
 Run simulation: Behavioral
 [Reference](https://github.com/gerardofisch/Verilog-HDL/tree/main/Labs)
