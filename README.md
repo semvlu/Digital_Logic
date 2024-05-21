@@ -42,4 +42,31 @@ initial begin
 endmodule
 ```
 Run simulation: Behavioral
+
+# Frequency Divider
+```
+module frequency_converter(
+    input CLK, reset,
+    input [26:0] divisor,
+    output reg out_clock
+    );
+    reg [26:0] counter = 0;
+    initial out_clock = 0;    
+    always @(posedge CLK or posedge reset) 
+    begin
+        counter <= counter + 1;
+        if (reset) begin
+            out_clock <= 26'b0;
+            counter <= 0;
+        end
+        else begin
+            if (counter >= divisor - 1) begin
+                counter <= 0;
+                out_clock <= ~out_clock;
+            end
+        end
+    end
+endmodule
+```
+
 [Reference](https://github.com/gerardofisch/Verilog-HDL/tree/main/Labs)
