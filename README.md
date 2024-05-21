@@ -36,7 +36,7 @@ integer i, j; // variables used for 'for loop'
 _4x4_mult uut(x,y,p); // instantiate the Unit Under Testing (UUT)
 initial begin 
  for(i=0,i<16,i=i+1) begin
-  x = i
+  x = i;
   #100
  end
 endmodule
