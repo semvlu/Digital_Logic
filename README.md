@@ -1,4 +1,4 @@
-Verilog Lab on FPGA: xc7a35tcsg324-1
+# Verilog Lab on FPGA: xc7a35tcsg324-1
 
 > Lab 0: AND gate
 
@@ -22,7 +22,7 @@ Verilog Lab on FPGA: xc7a35tcsg324-1
   * 4 times: off  
 
 
-Testbench
+# Testbench
 
 Add sources: Simulation
 
