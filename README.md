@@ -1,3 +1,5 @@
+Verilog Lab on FPGA: xc7a35tcsg324-1
+
 > Lab 0: AND gate
 
 > Lab 1: Half / Full adder
@@ -19,4 +21,18 @@
   * 3 times: set sec
   * 4 times: off  
 
+
+Testbench
+
+Add sources: Simulation
+
+reg as in; wire as out
+
+```
+for(i=0,i<16,i=i+1) begin
+ x = i
+ #100
+end
+```
+Run simulation: Behavioral
 [Reference](https://github.com/gerardofisch/Verilog-HDL/tree/main/Labs)
